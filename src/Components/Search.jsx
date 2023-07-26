@@ -4,7 +4,7 @@ function Search(props) {
 const [searchVal,setSearchVal] = useState('');
 
 function handleChange (e) {
-  setSearchVal(e.target.value);
+    setSearchVal(e.target.value);
 }
 
 function resetInput () {

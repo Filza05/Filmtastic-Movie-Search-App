@@ -1,22 +1,19 @@
 import React from 'react'
 const DEFAULT_PLACEHOLDER_IMAGE =
-    "https://m.media-amazon.com/images/M/MV5BMTczNTI2ODUwOF5BMl5BanBnXkFtZTcwMTU0NTIzMw@@._V1_SX300.jpg";
+    "https://media3.giphy.com/media/VYo5VxztwOwtHoKUl5/giphy.gif?cid=ecf05e47tfvfg99pe8rydo8g6eo9b7hvopehbyf77g3avyww&ep=v1_stickers_search&rid=giphy.gif&ct=s";
 
-function Movie({movie}) {
+function Movie({ movie }) {
     const poster =
-    movie.Poster === "N/A" ? DEFAULT_PLACEHOLDER_IMAGE : movie.Poster;
-    
+        movie.Poster === "N/A" ? DEFAULT_PLACEHOLDER_IMAGE : movie.Poster;
+
     return (
-        <div className='Movie'>
-            <h2>{movie.Title}</h2>
-            <div>
-                <img
-                    width="200"
+        <div className='Movie flex flex-col items-center justify-center md:w-[20%] w-[40%] h-full m-6 gap-3 cursor-default hover:translate-y-10 hover:duration-700'>
+            <h2 className='font-semibold h-10 text-[#DCD7C9]'>{movie.Title}</h2>
+                <img className='border-4 border-[#DCD7C9] rounded-xl h-72'
                     alt={`The movie titled: ${movie.Title}`}
                     src={poster}
                 />
-            </div>
-            <p>({movie.Year})</p>
+            <p className='text-xl text-[#DCD7C9]'>({movie.Year})</p>
         </div>
     )
 }
