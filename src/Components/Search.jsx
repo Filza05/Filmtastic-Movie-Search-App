@@ -20,7 +20,11 @@ function handleMovieSearch (e) {
     return (
         <div className=' mt-14 p-10'>
             <form className='flex justify-center sm:justify-start gap-5'>
+<<<<<<< HEAD
                 <input className='w-[300px] h-11 sm:w-[400px] rounded-md font-semibold p-4 focus:bg-[#2C3639] focus:duration-700 text-xl text-[#DCD7C9]'
+=======
+                <input className='w-[300px] h-11 sm:w-[400px] rounded-md font-semibold p-4 text-xl'
+>>>>>>> 253c529 (Few changes)
                     type='text' placeholder='Search for movies' value={searchVal} onChange={handleChange} >
                 </input>
 
